@@ -6,7 +6,8 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		//new exercicios061016.Treino();
-		new exercicios071016.Treino();
+		//new exercicios071016.Treino();
+		new exercicios101016.BigBoss();
 		
 	}
 
