@@ -3,63 +3,67 @@ package exercicios101016;
 import java.util.ArrayList;
 
 public class GestaoStand {
-	
-	private ArrayList _transacoes;
+	private ArrayList _transaccoes;
 	private ArrayList _automoveis;
 	private ArrayList _clientes;
 	
 	public GestaoStand() {
+		_transaccoes 	= new ArrayList<>();
+		_automoveis		= new ArrayList<>();
+		_clientes		= new ArrayList<>();
 		
 		
+		Automovel newAuto = criarCarro();
 		
-		Automovel newauto = criarCarro();
-		_automoveis.add(newauto);
 		
-		Cliente c = new Cliente("Alberto Matos", "Seixal", "963845197", 982344522);
-		Cliente c2 = new Cliente("Amilcar Alto", "Setubal", "963865497", 982394422);
+		_automoveis.add(newAuto);
+		
+		Cliente c = new Cliente("Alberto Matos", "Seixal", "967123654", 987654321);
+		Cliente c2 = new Cliente("Amilcar Alho", "Setubal", "932876345", 123456765);
 		_clientes.add(c);
 		_clientes.add(c2);
 		
-		Transacao crenault = new Transacao(Transacao.COMPRA, newauto, c, 2300.0);
+		Transaccao crenault = new Transaccao(Transaccao.COMPRA, 
+				newAuto, 
+				c, 2300.0);
 		
-		_transacoes.add(crenault);
+		_transaccoes.add(crenault);
 		
-		Transacao Vrenault = new Transacao(Transacao.VENDA, newauto, c2, 2700.0);
+		Transaccao vrenault = new Transaccao(Transaccao.VENDA, 
+				newAuto, 
+				c2, 
+				2700.0);
 		
-		
+		_transaccoes.add(vrenault);
 	}
 	
 	public Automovel criarCarro() {
-		
-		Automovel a = new Automovel(2500.00, 1600, "Renault", "Megane", 120000, 2002);
-		Automovel a2 = new Automovel(1750.00, 1200, "Ford", "Focus", 205000, 1998);
-		
+		Automovel a = new Automovel(2500.00, 
+				1600, 
+				"Renault", 
+				"Megane", 
+				120000, 
+				2002);
 		return a;
 	}
 	
 	public Cliente criarCliente() {
-		
-		Cliente c = new Cliente("Alberto Matos", "Seixal", "963845197", 982344522);
-		Cliente c2 = new Cliente("Amilcar Alto", "Setubal", "963865497", 982394422);
+		Cliente c = new Cliente("Alberto Matos", "Sesimbra", "963 543 846", 876543129);
 		
 		return c;
-		
 	}
 	
-	public Transacao comprarCarro(Automovel carro, Cliente c) {
-		
+	public Transaccao comprarCarro(Automovel carro, Cliente c) {
 		return null;
-		
 	}
 	
-	public Transacao venderCarro(Automovel carro, Cliente c) {
-		
+	public Transaccao venderCarro(Automovel carro, Cliente c) {
 		return null;
-		
 	}
 
-	public ArrayList get_transacoes() {
-		return _transacoes;
+	public ArrayList get_transaccoes() {
+		return _transaccoes;
 	}
+	
 	
 }
